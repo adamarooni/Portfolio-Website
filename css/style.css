@@ -54,8 +54,7 @@ hr {
 	margin-left: auto;
 	margin-right: auto;
 	border-color: #000;
-}
-	
+}	
 
 #site-slogan {
 	text-align: center;
@@ -63,15 +62,14 @@ hr {
 	padding: 0;
 }
 
-.homepage-nav-buttons {
-	text-align: center;
-	padding-top: 15px
+.mx-auto{
+	padding-top: 7px
 }
 
 /* Skills Style */
 
 #skills {
-	padding-bottom: 50px;
+	padding: 50px 0 100px;
 	background-color: #BFC2C7;
 }
 
@@ -94,8 +92,12 @@ h5 {
 
 /* Portfolio Style */
 
+#port {
+	padding: 50px 0 100px;
+}
+
 .portfolio {
-	padding-bottom: 15px;
+	padding-bottom: 20px;
 }
 
 .port {
@@ -106,7 +108,7 @@ h5 {
 /* Contact Style */
 
 #contact {
-	padding: 15px 0 200px;
+	padding: 50px 0 100px;
 	background-color: #BFC2C7;
 }
 

@@ -8,8 +8,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="./css/style.css">
+
+	<!-- JQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <title>Adam Haq</title>
-  </head>
+	</head>
   <body>
    	<!-- home, name, nav-->
 	<div class="container-fluid" id="home">
@@ -19,19 +23,38 @@
 		<hr>
 		<div id="site-slogan">Software Developer</div>
 		<div class="homepage-nav-buttons">
-			<ul class="list-unstyled list-inline">
-				<li class="list-inline-item">
-					<a href="#skills" class="btn btn-outline-dark" role="button" aria-pressed="true">Skills</a>
-				</li>
-				<li class="list-inline-item">
-					<a href="#port" class="btn btn-outline-dark" role="button" aria-pressed="true">Portfolio</a>
-				</li>
-				<li class="list-inline-item">
-					<a href="#contact" class="btn btn-outline-dark" role="button" aria-pressed="true">Contact</a>
-				</li>
-			</ul>
+			<nav class="navbar sticky-top navbar-expand-lg navbar-light">
+				<div class="navbar-nav mx-auto">
+					<ul class="list-unstyled list-inline">
+						<li class="list-inline-item">
+							<a href="#skills" class="btn btn-outline-dark smooth-scroll" role="button" aria-pressed="true">Skills</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="#port" class="btn btn-outline-dark smooth-scroll" role="button" aria-pressed="true">Portfolio</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="#contact" class="btn btn-outline-dark smooth-scroll" role="button" aria-pressed="true">Contact</a>
+						</li>
+					</ul>
+				  </div>
+			 </nav>
 		</div>	
 	</div>
+	<script>
+	$('a.smooth-scroll[href*="#"]:not([href="#"])').click(function() {
+  		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    		var target = $(this.hash);
+    		target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    		if (target.length) {
+     		 $('html, body').animate({
+        		scrollTop: target.offset().top
+     		 }, 1000);
+      		return false;
+    		}
+  		}
+	}); 
+	
+	</script>
 	<!-- end home, name, nav -->
 	
 	<!-- Skills -->
@@ -118,28 +141,108 @@
 			<h1 class="portfolio">Portfolio</h1>
 			<div class="card-deck">
 				<div class="port card text-center" style="width: 18rem;">
-					<img class="card-img-top" src="./images/1.png" alt="Card image cap">
+					<!-- Make the picture link to the modal -->
+					<a href="#ProjetModal1" role="button" data-toggle="modal"><img class="card-img-top" src="./images/1.png" alt="Card image cap"></a>
+					<!-- Modal -->
+					<div class="modal" id="ProjetModal1" tabindex="-1" role="dialog">
+							<div class="modal-dialog" role="document">
+							  <div class="modal-content">
+								<div class="modal-header">
+								  <h5 class="modal-title">Project One</h5>
+								  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								  </button>
+								</div>
+								<div class="modal-body">
+								  <p>Information about my first project goes here.</p>
+								</div>
+								<div class="modal-footer">
+								   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							  </div>
+							</div>
+						  </div>
 					<div class="card-body">
 						<h5 class="card-title">Project 1</h5>
 						<p class="card-text">I haven't done anything yet, but this is where I'd put information about a project.</p>
 					</div>
 				</div>
 				<div class="port card text-center" style="width: 18rem;">
-					<img class="card-img-top" src="./images/2.png" alt="Card image cap">
+					<!--Make the picture link to the modal -->
+					<a href="#ProjectModal2" role="button" data-toggle="modal"><img class="card-img-top" src="./images/2.png" alt="Card image cap"></a>
+					<!--Modal -->
+					<div class="modal" id="ProjectModal2" tabindex="-1" role="dialog">
+							<div class="modal-dialog" role="document">
+							  <div class="modal-content">
+								<div class="modal-header">
+								  <h5 class="modal-title">Project Two</h5>
+								  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								  </button>
+								</div>
+								<div class="modal-body">
+								  <p>Information about my second project goes here.</p>
+								</div>
+								<div class="modal-footer">
+								   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							  </div>
+							</div>
+						  </div>
 					<div class="card-body">
 						<h5 class="card-title">Project 2</h5>
 						<p class="card-text">I haven't done anything yet, but this is where I'd put information about another project.</p>
 					</div>
 				</div>
 				<div class="port card text-center" style="width: 18rem;">
-					<img class="card-img-top" src="./images/3.png" alt="Card image cap">
+					<!--Make the picture link to the modal -->
+					<a href="#ProjectModal3" role="button" data-toggle="modal"><img class="card-img-top" src="./images/3.png" alt="Card image cap"></a>
+					<!-- Modal -->
+					<div class="modal" id="ProjectModal3" tabindex="-1" role="dialog">
+							<div class="modal-dialog" role="document">
+							  <div class="modal-content">
+								<div class="modal-header">
+								  <h5 class="modal-title">Project Three</h5>
+								  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								  </button>
+								</div>
+								<div class="modal-body">
+								  <p>Information about my third project goes here.</p>
+								</div>
+								<div class="modal-footer">
+								   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							  </div>
+							</div>
+						  </div>
 					<div class="card-body">
 						<h5 class="card-title">Project 3</h5>
 						<p class="card-text">I haven't done anything yet, but this is where I'd put information about yet another project.</p>
 					</div>
 				</div>
 				<div class="port card text-center" style="width: 18rem;">
-					<img class="card-img-top" src="./images/4.png" alt="Card image cap">
+					<!--Make the picture link to the modal -->
+					<a href="#ProjectModal4" role="button" data-toggle="modal"><img class="card-img-top" src="./images/4.png" alt="Card image cap"></a>
+					<!-- Modal -->
+					<div class="modal" id="ProjectModal4" tabindex="-1" role="dialog">
+							<div class="modal-dialog" role="document">
+							  <div class="modal-content">
+								<div class="modal-header">
+								  <h5 class="modal-title">Project Four</h5>
+								  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								  </button>
+								</div>
+								<div class="modal-body">
+								  <p>Information about my fourth project goes here.</p>
+								</div>
+								<div class="modal-footer">
+								   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							  </div>
+							</div>
+						  </div>
 					<div class="card-body">
 						<h5 class="card-title">Project 4</h5>
 						<p class="card-text">I haven't done anything yet, but this is where I'd put information about a fourth project.</p>
@@ -187,6 +290,8 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	
   </body>
 </html>
