@@ -89,6 +89,10 @@ h5 {
 	font-weight: 700;
 }
 
+.skills-columns {
+	padding-left: 50px
+}
+
 /* Portfolio Style */
 
 .card {
