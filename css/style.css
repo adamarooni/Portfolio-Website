@@ -81,9 +81,7 @@ hr {
 	text-align:center;
 }
 
-.card {
-	border-color: #BFC2C7;
-}
+
 
 
 h5 {
@@ -91,6 +89,12 @@ h5 {
 }
 
 /* Portfolio Style */
+
+.card {
+	border-color: #BFC2C7;
+	display: block;
+	width: 50%;
+}
 
 #port {
 	padding: 50px 0 100px;
