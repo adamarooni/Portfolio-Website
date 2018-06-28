@@ -48,43 +48,74 @@
 	<div class="container-fluid">
 		<h1 class="skills">Skills</h1>
 		<p class="skills-buttons">
-			<a class="btn btn-outline-dark" data-toggle="collapse" href="#webdev" role="button" aria-expanded="false" aria-controls="collapseExample">
-				Web Development
+			<a class="btn btn-outline-dark" data-toggle="collapse" href="#progdev" role="button" aria-expanded="false" aria-controls="collapseExample">
+				Programming/Development
 			</a>
+			<a class="btn btn-outline-dark" data-toggle="collapse" href="#frameworks" role="button" aria-expanded="false" aria-controls="collapseExample">
+					Frameworks
+				</a>
 			<a class="btn btn-outline-dark" data-toggle="collapse" href="#vercon" role="button" aria-expanded="false" aria-controls="collapseExample">
 				Version Control
 			</a>
+			<a class="btn btn-outline-dark" data-toggle="collapse" href="#projman" role="button" aria-expanded="false" aria-controls="collapseExample">
+					Project Management
+				</a>
 			<a class="btn btn-outline-dark" data-toggle="collapse" href="#it" role="button" aria-expanded="false" aria-controls="collapseExample">
 				IT
-			</a>
-			<a class="btn btn-outline-dark" data-toggle="collapse" href="#soon" role="button" aria-expanded="false" aria-controls="collapseExample">
-				Coming Soon
-			</a>
+			</a>			
 		</p>
 		<div class="row">
 			<div class="col">
-				<div class="collapse" id="webdev">
+				<div class="collapse" id="progdev">
 					<div class="card card-body" style="background-color:#BFC2C7">
-						<h5>Web Development</h5>
+						<h5>Programming/Development</h5>
 						<ul class="list-unstyled">
 							<li>HTML5</li>
-							<li>CSS3</li>
-							<li>Bootstrap4</li>
+							<li>CSS3</li>														
+							<li>JavaScript and jQuery</li>
+							<li>SQL and MS SQL Server 2014</li>
+							<li>C#</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="col">
+					<div class="collapse" id="frameworks">
+						<div class="card card-body" style="background-color:#BFC2C7">
+							<h5>Frameworks</h5>
+							<ul class="list-unstyled">
+								<li>ASP.NET MVC</li>
+								<li>.NET Framework</li>
+								<li>Bootstrap4</li>
+								<li>Entity Framework</li>								
+							</ul>
+						</div>
+					</div>
+				</div>
+			<div class="col">
 				<div class="collapse" id="vercon">
 					<div class="card card-body" style="background-color:#BFC2C7">
-						<h5>Version Control</h5>
+						<h5>IDE and Version Control</h5>
 						<ul class="list-unstyled">
+							<li>Visual Studio 2017</li>
 							<li>Git</li>
-							<li>GitHub - <a href="http://www.github.com/adamarooni">GitHub Profile</a></li>
+							<li>GitHub - <a href="http://www.github.com/adamhaq">GitHub Profile</a></li>
+							<li>Team Foundation Server</li>
 						</ul>
 					</div>
 				</div>
 			</div>
+			<div class="col">
+					<div class="collapse" id="projman">
+						<div class="card card-body" style="background-color:#BFC2C7">
+							<h5>Project Management</h5>
+							<ul class="list-unstyled">
+								<li>Agile</li>
+								<li>Scrum</li>								
+							</ul>
+						</div>
+					</div>
+				</div>
 			<div class="col">	
 				<div class="collapse" id="it">
 					<div class="card card-body" style="background-color:#BFC2C7">
@@ -100,21 +131,7 @@
 					</div>
 				</div>
 			</div>	
-			<div class="col">
-				<div class="collapse" id="soon">
-					<div class="card card-body" style="background-color:#BFC2C7">
-						<h5>Coming Soon</h5>
-						<ul class="list-unstyled">
-							<li>C#</li>
-							<li>JavaScript</li>
-							<li>SQL</li>
-							<li>ASP.NET</li>
-							<li>Visual Studio and TFS</li>
-							<li>And more...</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+			
 		</div>			
 	</div>		
 		
@@ -126,21 +143,27 @@
 		<div class="container">
 			<h1 class="portfolio">Portfolio</h1>
 			<div class="card-deck">
-				<div class="port card text-center" style="width: 18rem;">
+				<div class="port card text-left" style="width: 18rem;">
 					<!-- Make the picture link to the modal -->
-					<a href="#ProjetModal1" role="button" data-toggle="modal"><img class="card-img-top" src="./images/1.png" alt="Card image cap"></a>
+					<a href="#ProjetModal1" role="button" data-toggle="modal"><img class="card-img-top" src="./images/blueribbons.png" alt="Card image cap"></a>
 					<!-- Modal -->
 					<div class="modal" id="ProjetModal1" tabindex="-1" role="dialog">
 							<div class="modal-dialog" role="document">
 							  <div class="modal-content">
 								<div class="modal-header">
-								  <h5 class="modal-title">Project One</h5>
+								  <h5 class="modal-title">Blue Ribbons Review</h5>
 								  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								  </button>
 								</div>
 								<div class="modal-body">
-								  <p>Information about my first project goes here.</p>
+								  <p>
+										<ul>
+											<li>Using C#, I created logic to display the percentage of referred users who created an account.  Displayed the percentage using Razor syntax.</li>
+											<li>Styled the application using HTML, CSS, and jQuery.</li>
+											<li>Participated in two sprints as a Scrum team member.</li>
+										</ul>
+									</p>
 								</div>
 								<div class="modal-footer">
 								   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -149,25 +172,32 @@
 							</div>
 						  </div>
 					<div class="card-body">
-						<h5 class="card-title">Project 1</h5>
-						<p class="card-text">I haven't done anything yet, but this is where I'd put information about a project.</p>
+						<h5 class="card-title">Blue Ribbons Review</h5>
+						<p class="card-text">Contributed to front-end development of Blue Ribbons Review, a website that helps sellers on Amazon gain traction by offering discounts and encouraging buyers to review their product.				
+						</p>
 					</div>
-				</div>
-				<div class="port card text-center" style="width: 18rem;">
+				</div>				
+				<div class="port card text-left" style="width: 18rem;">
 					<!--Make the picture link to the modal -->
-					<a href="#ProjectModal2" role="button" data-toggle="modal"><img class="card-img-top" src="./images/2.png" alt="Card image cap"></a>
+					<a href="#ProjectModal2" role="button" data-toggle="modal"><img class="card-img-top" src="./images/books.png" alt="Card image cap"></a>
 					<!--Modal -->
 					<div class="modal" id="ProjectModal2" tabindex="-1" role="dialog">
 							<div class="modal-dialog" role="document">
 							  <div class="modal-content">
 								<div class="modal-header">
-								  <h5 class="modal-title">Project Two</h5>
+								  <h5 class="modal-title">Library Database</h5>
 								  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								  </button>
 								</div>
 								<div class="modal-body">
-								  <p>Information about my second project goes here.</p>
+								  <p>
+										<ul>
+											<li>Followed a provided design to create a relational database with multiple books, library branches, borrowers, book publishers, book authors, and book loans.</li>
+											<li>Followed the design to create multiple stored procedures that could be used to query said database.</li>
+											<li><a href="https://github.com/adamhaq/Library-Database/">View project on GitHub.</a></li>
+										</ul>
+									</p>
 								</div>
 								<div class="modal-footer">
 								   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -176,64 +206,10 @@
 							</div>
 						  </div>
 					<div class="card-body">
-						<h5 class="card-title">Project 2</h5>
-						<p class="card-text">I haven't done anything yet, but this is where I'd put information about another project.</p>
+						<h5 class="card-title">Library Database</h5>
+						<p class="card-text">As part of my final SQL project for the Tech Academy, I built a small library management database using SQL Server 2014.</p>
 					</div>
-				</div>
-				<div class="port card text-center" style="width: 18rem;">
-					<!--Make the picture link to the modal -->
-					<a href="#ProjectModal3" role="button" data-toggle="modal"><img class="card-img-top" src="./images/3.png" alt="Card image cap"></a>
-					<!-- Modal -->
-					<div class="modal" id="ProjectModal3" tabindex="-1" role="dialog">
-							<div class="modal-dialog" role="document">
-							  <div class="modal-content">
-								<div class="modal-header">
-								  <h5 class="modal-title">Project Three</h5>
-								  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								  </button>
-								</div>
-								<div class="modal-body">
-								  <p>Information about my third project goes here.</p>
-								</div>
-								<div class="modal-footer">
-								   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								</div>
-							  </div>
-							</div>
-						  </div>
-					<div class="card-body">
-						<h5 class="card-title">Project 3</h5>
-						<p class="card-text">I haven't done anything yet, but this is where I'd put information about yet another project.</p>
-					</div>
-				</div>
-				<div class="port card text-center" style="width: 18rem;">
-					<!--Make the picture link to the modal -->
-					<a href="#ProjectModal4" role="button" data-toggle="modal"><img class="card-img-top" src="./images/4.png" alt="Card image cap"></a>
-					<!-- Modal -->
-					<div class="modal" id="ProjectModal4" tabindex="-1" role="dialog">
-							<div class="modal-dialog" role="document">
-							  <div class="modal-content">
-								<div class="modal-header">
-								  <h5 class="modal-title">Project Four</h5>
-								  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								  </button>
-								</div>
-								<div class="modal-body">
-								  <p>Information about my fourth project goes here.</p>
-								</div>
-								<div class="modal-footer">
-								   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								</div>
-							  </div>
-							</div>
-						  </div>
-					<div class="card-body">
-						<h5 class="card-title">Project 4</h5>
-						<p class="card-text">I haven't done anything yet, but this is where I'd put information about a fourth project.</p>
-					</div>
-				</div>
+				</div>			
 			</div>
 		</div>
 	</section>
@@ -252,7 +228,7 @@
 						</a>					
 					</li>
 					<li class="github">
-						<a href="https://github.com/adamarooni" alt="GitHub">
+						<a href="https://github.com/adamhaq" alt="GitHub">
 							<img src="./images/github2.png">
 						</a>
 					</li>
